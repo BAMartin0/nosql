@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const thoughtSchema = require('./Thought'); 
 //help to understand imports and exports
 
 
@@ -14,7 +15,7 @@ const userSchema = new Schema({
     required: true,
     unique: true,
     // match: Must match a valid email address (look into Mongoose's matching validation)
-    match: ["/^[^s@]+@[^s@]+.[^s@]+$/", 'Please enter valid email address'],
+    match: [/^[^s@]+@[^s@]+.[^s@]+$/, 'Please enter valid email address'],
   },
   thoughts: [
     {
