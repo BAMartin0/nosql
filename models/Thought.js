@@ -29,3 +29,5 @@ thoughtSchema.virtual("reactionCount").get(function () {
 const Thought = model("thought", thoughtSchema);
 
 module.exports = Thought;
+
+//HOW TO TIE A THOUGHT TO A USER

@@ -45,3 +45,17 @@ const User = model('user', userSchema);
 //Exports
 
 module.exports = User;
+
+
+
+// //
+// {
+// 	"_id": "6695ed93d1e76c3be3042f5d",
+// 	"thoughtText": "This will work!", 
+// 	"username": "BammBamm", 
+// 	"reactions": [
+// 		{"reactionBody":"I love the optimism", 
+// 		 "username": "jollyho"
+// 		}
+// 	]
+// }
