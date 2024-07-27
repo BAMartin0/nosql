@@ -11,6 +11,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  //get single thought
   async getSingleThought(req, res) {
     try {
       const thought = await Thought.findOne({
@@ -28,6 +29,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  //create a thought
   async createThought(req, res) {
     try {
       const thought = await Thought.create(req.body);
@@ -49,6 +51,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  //update a thought
   async updateThought(req, res) {
     try {
       const thought = await Thought.findOneAndUpdate(
@@ -66,6 +69,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  //delete a thought
   async deleteThought(req, res) {
     try {
       const thought = await Thought.findOneAndDelete({
@@ -81,6 +85,7 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  //add reaction to a thought
   async addReaction (req, res) {
     console.log("You are adding a reaction");
     console.log(req.body);
@@ -102,7 +107,8 @@ module.exports = {
     } catch (err) {
       res.status(500).json(err);
     }
-    },
+  },
+  //remove reaction from a thought
   async removeReaction(req, res) {
     try {
       const thought = await Thought.findOneAndUpdate(
@@ -123,6 +129,5 @@ module.exports = {
     }
   },
 };
-  // create functions for getting all thoughts, getting Single Thought, adding Thought, updating Thought, deleting Thought, adding reaction, deleting reaction
-
+ 
 
